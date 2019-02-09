@@ -1,41 +1,41 @@
-# AMP server for local development on linux 
+# AMP server para desenvolvimentos locais em Linux (Linux Mint/Ubuntu)
 
-A local web server with PHP, Apache, Mysql and PHPMyadmin using Docker Composer
+Ele instala as maquinas locais contendo o PHP(uma imagem com a versão 5.6 e outra com a 7.2), Apache, Mysql and PHPMyadmin usando o Docker Composer.
 
-## Step 1:
+## Etapa 1:
 
-run
+Execute (este comando baixa apenas o container com o portainer)
 ```
 docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
 ```
-or
+ou (executa todos os comandos necessários que estão descritos dentro do projeto)
 ```
 /bin/bash portainer.sh
 ```
 you'll be able to access localhost:9000 to acess [Portainer](https://www.portainer.io/) <<< nice tool >>>
 
-### Step 2:
+### Etapa 2:
 
-access ./php_7_2 folder and run (ports 80, 5080, 6080 will be used here):
+Acesse a pasta ./php_7_2 fe execute (as portas 80, 5080, 6080 serão utilizadas a partir de agora no computador local):
 
 ```
 docker-compose up -d
 ```
 
-you can do the same in ./php_5_6 folder
+Você pode executar os mesmos comandos na pasta ./php_5_6 para obter a outra versão do PHP
 
-### Step 3:
+### Etapa 3:
 
-Result:
+Resultados:
 
-- http://localhost/ to use php 7.2
-- http://localhost:5080/ to use php 5.6
-- http://localhost:6080/ to use PHPMyadmin
-- http://localhost:9000/ to access Portainer tool and manage containers
-- To acess mysql use MYSQL container ip, user: root and password: teste123
+- http://localhost/ usando php 7.2
+- http://localhost:5080/ usando php 5.6
+- http://localhost:6080/ usando PHPMyadmin
+- http://localhost:9000/ para acessar a ferramenta Portainer e gerenciar contêineres
+- Para acessar o mysql use o container MYSQL ip, user: root e password: teste123
 
-All in your local machine:
+Tudo em sua máquina local:
 
-- your databases will be saved in your local ./data folder
-- your php.ini config can be added in ./php-ini folder
-- your php files can be added in ./www folder
+- seus bancos de dados serão salvos em sua pasta local ./data
+- sua configuração do php.ini pode ser adicionada na pasta ./php-ini
+- seus arquivos php podem ser adicionados na pasta ./www
