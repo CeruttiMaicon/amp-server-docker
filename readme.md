@@ -1,4 +1,4 @@
-# AMP server para desenvolvimentos locais em Linux (Linux Mint/Ubuntu)
+# AMP server para desenvolvimento local em Linux (Linux Mint/Ubuntu)
 
 Ele instala as maquinas locais contendo o PHP(uma imagem com a versão 5.6 e outra com a 7.2), Apache, Mysql and PHPMyadmin usando o Docker Composer.
 
